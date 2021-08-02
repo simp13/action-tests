@@ -13,4 +13,15 @@ jobs:
         run: |
           node -v
           npm -v
-          
+      
+      - name: Python Command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+    
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Get Current Directory
+        run: pwd
